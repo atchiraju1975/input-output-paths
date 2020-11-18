@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -11,6 +12,11 @@ public class Main {
         Path path = FileSystems.getDefault().getPath("WorkingDirectoryFile.txt");
         printFile(path);
 
+        Path filePath = FileSystems.getDefault().getPath("files","SubdirectoryFile.txt");
+        printFile(filePath);
+
+        filePath = Paths.get("/Users/yc00/OneDrive - Tesco/Documents/175_StoreColleague/Learning/javaspringboot/OutThere.txt");
+        printFile(filePath);
     }
 
     private static void printFile(Path path){
