@@ -22,7 +22,7 @@ public class Main {
         int fileLimit = FILE_LIMIT;
         String filePrefix = "File";
 
-        for(int i=1;i<fileLimit;i++){
+        for(int i=1;i<=fileLimit;i++){
 
             String fileName = filePrefix + i+".txt";
 
@@ -47,7 +47,7 @@ public class Main {
 
             for(Path file: contents){
                 System.out.println("Reading File : "+ file.getFileName());
-                printFile(file.getFileName());
+                printFile(file);
             }
 
         } catch(IOException e){
